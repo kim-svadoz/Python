@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 우선순위</title>
+    <style>
+        p{
+            color: yellow;
+        }
+        .green{
+            color: green;
+        }
+        .cyan{
+            color: cyan !important;
+        }
+        .red{
+            color: red;
+        }
+        
+        #blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- !important 뜻도 중요하다인데 느낌표 까지 붙음-->
+    <p class="red cyan" id="blue" style="color: black;">빨간색 글씨</p>
+    <!-- inline 적용은 굳이 굳이 찾아서 적용 -->
+    <p class="red" id="blue" style="color: black;">빨간색 글씨</p>
+    <!-- id는 보통 고유 값 -->
+    <p class="red" id="blue">빨간색 글씨</p>
+    <!-- class는 보편적으로 css를 적용할 때 사용 -->
+    <!-- 태그 자체에 적용은 매우 포괄적 -->
+    <p class="red">빨간색 글씨</p>
+    <p class="green red">나는 무슨색?</p>
+</body>
+</html>

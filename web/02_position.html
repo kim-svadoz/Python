@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            /* border : size style color */
+            border: 1px dashed black;
+        }
+        .rela {
+            position: relative;
+            background-color: red;
+            left: 500px;
+        }
+
+        /* absolutie는 static이 아닌 것들을 대상으로 움직인다. "조상부모 기준임" */
+        .abs {
+            position: absolute;
+            background-color: blue;
+            right: 0;
+        }
+
+        /* ViewPort를 기준으로 움직이기 때문에 화면에 고정되는 느낌 */
+        .fix {
+            position: fixed;
+            background-color: chartreuse;
+            right: 100px;
+            bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box rela"></div>
+    <div class="box abs"></div>
+    <div class="box fix"></div>
+</body>
+</html>
